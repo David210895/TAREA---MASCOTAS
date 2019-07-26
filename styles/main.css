@@ -104,7 +104,11 @@ header .menu {
 .show-menu header nav {
     transform: translateX(0%);
 }
-
+header .sociales{
+    margin: 0 0 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
 /*
 Main
 */

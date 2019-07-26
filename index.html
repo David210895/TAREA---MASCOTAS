@@ -5,25 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My primera pagina web</title>
+    <title>Mascotas</title>
+    <meta name="description" content="Página de mascotas">
+    <meta name="author" content="David Sánchez" />
+    <meta name="keywords" content="perros,niños,felices,club" />
+    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
     <script src="https://kit.fontawesome.com/43f3cc2ec8.js"></script>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="DAVIDSANCHEZ" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://david210895.github.io/TAREA---MASCOTAS/ " />
+    <meta property="og:title" content="Mascotas" />
+    <meta property="og:description" content="Página dedicada a los amantes de perros" />
+    <meta property="og:image" content="https://picsum.photos/216/216" />
 </head>
 
 <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3"></script>
     <div>
         <!--HEADER-->
         <header>
             <a class="logo" href="#"><i class="fas fa-dog"></i> Mis Perros</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Mascotas</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
+            <div>
+                <ul class="sociales">
+                    <li><div class="fb-share-button" data-href="https://david210895.github.io/TAREA---MASCOTAS/ " data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavid210895.github.io%2FTAREA---MASCOTAS%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li>
                 </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Mascotas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
             <i class="js_menu menu fas fa-bars"></i>
         </header>
         <!--MAIN-->
