@@ -1,0 +1,322 @@
+/*
+Globals
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*Fuentes*/
+    font-family: arial;
+    font-size: 13px;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-family: verdana; 
+  margin-bottom: 20px; 
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+b {
+    font-weight: bold;
+}
+
+/*
+ Header
+*/
+header {
+    /*Color*/
+    background: brown;
+
+    /*Box model*/
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 20px;
+
+    /*
+    Positions
+    */
+    position: fixed;
+    top: 0;
+    z-index:1;
+}
+
+header a {
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header .fa-dog {
+    font-size: 32px;
+}
+
+header .menu {
+    position: absolute;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu header nav {
+    transform: translateX(0%);
+}
+
+/*
+Main
+*/
+main {
+    margin-top: 64px;
+}
+
+/*
+banner
+*/
+.banner {
+    /*Positions*/
+    position: relative;
+
+    /*Box model*/
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    margin-top: -20%;
+    width: 100%;
+}
+
+.banner .text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.banner .text h1,
+.banner .text p {
+    margin-bottom: 10px;
+}
+
+.banner .text a {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+/*
+CLUB
+*/
+.club {
+    background: #e6faff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.club .blog div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.club img {
+    margin-bottom: 10px;
+}
+
+/*
+Pets
+*/
+.pets {
+    text-align: center;
+    background: #e3e2ff;
+    padding: 20px 0;
+}
+
+.pets div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pets img {
+    margin-bottom: 10px;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
+/*
+Footer
+*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: brown;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li {
+    margin-left: 20px;
+}
+
+footer .fab {
+    font-size: 16px;
+}
+
+
+
+@media (max-width:960px) {
+    /*club*/
+    .club .blog div {
+        flex-wrap: wrap;
+    }
+
+    .club .blog article {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d2cece;
+        padding-bottom: 20px;
+    }
+}
+ 
+
+@media (max-width:780px) {
+    /*Header*/
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 67px;
+        background: rgba(0,0,0,.8);
+        transition: all .5s ease;
+        transform: translateX(-100%);
+    }
+
+    header ul {
+        display: block;
+    }
+
+    header ul li {
+        margin: 0;
+    }
+
+    header ul a {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid brown;
+        font-size: 16px;
+    }
+
+    header .menu {
+        display: block;
+    }
+
+    /*pets*/
+    .pets div {
+        flex-wrap: wrap;
+    }
+
+    .pets article {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:580px) {
+    /*global*/
+    body {
+        font-size: 11px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    /*banner*/
+    .banner {
+        height: auto;
+    }
+
+    .banner .text {
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,.5);
+    }
+}
+
+@media (max-width:360px) {
+    /*footer*/
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        margin-top: 20px;
+    }
+
+    footer ul li:first-child {
+        margin-left: 0;
+    }
+}
